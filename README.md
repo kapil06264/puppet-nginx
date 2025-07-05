@@ -14,7 +14,6 @@ This module was migrated from James Fryman <james@frymanet.com> to Vox Pupuli.
 This module manages NGINX configuration.
 
 ### Requirements
-
 * Puppet 4.6.1 or later.  Puppet 3 was supported up until release 0.6.0.
 * apt is now a soft dependency. If your system uses apt, you'll need to
   configure an appropriate version of the apt module. Version 9.2.0 or higher is
