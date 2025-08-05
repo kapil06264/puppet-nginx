@@ -37,7 +37,7 @@
 #  whether to en- or disable the config check via nginx -t on config changes
 #
 # @param service_config_check_command
-#  Command to execute to validate the generated configuration.
+#  Command to execute to validate the generated configuratio.
 #
 # @param reset_timedout_connection
 #   Enables or disables resetting timed out connections and connections closed
