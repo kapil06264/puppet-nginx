@@ -216,6 +216,7 @@
 # @param nginx_upstreams
 # @param nginx_upstreams_defaults
 # @param purge_passenger_repo
+# k
 class nginx (
   ### START Nginx Configuration ###
   Optional[Variant[Stdlib::Absolutepath, Tuple[Stdlib::Absolutepath, Integer, 1, 4]]] $client_body_temp_path      = undef,
