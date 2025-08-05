@@ -19,6 +19,7 @@ This module manages NGINX configuration.
 * apt is now a soft dependency. If your system uses apt, you'll need to
   configure an appropriate version of the apt module. Version 9.2.0 or higher is
   recommended because of supporting "modern keyrings".
+  
 
 ### Additional Documentation
 
