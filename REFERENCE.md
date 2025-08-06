@@ -259,7 +259,7 @@ Data type: `Boolean`
 
 When set, nginx will include module configurations files installed in the
 /etc/nginx/modules-enabled directory. This is also enabled if mail is
-being configured (to allow the module to be loaded).
+being configured (to allow the module to be load).
 
 Default value: `$nginx::params::include_modules_enabled`
 
@@ -1153,13 +1153,13 @@ Data type: `Array`
 Default value:
 
 ```puppet
-[
-    'Host $host',
-    'X-Real-IP $remote_addr',
-    'X-Forwarded-For $proxy_add_x_forwarded_for',
-    'X-Forwarded-Host $host',
-    'X-Forwarded-Proto $scheme',
-    'Proxy ""',
+[
+    'Host $host',
+    'X-Real-IP $remote_addr',
+    'X-Forwarded-For $proxy_add_x_forwarded_for',
+    'X-Forwarded-Host $host',
+    'X-Forwarded-Proto $scheme',
+    'Proxy ""',
   ]
 ```
 
@@ -2078,10 +2078,10 @@ Default index files for NGINX to read when traversing a directory
 Default value:
 
 ```puppet
-[
-    'index.html',
-    'index.htm',
-    'index.php',
+[
+    'index.html',
+    'index.htm',
+    'index.php',
   ]
 ```
 
@@ -3085,10 +3085,10 @@ Default value: `[]`
 Data type:
 
 ```puppet
-Hash[String, Variant[
-      String,
-      Array[String],
-      Hash[String, Variant[String, Array[String]]],
+Hash[String, Variant[
+      String,
+      Array[String],
+      Hash[String, Variant[String, Array[String]]],
   ]]
 ```
 
@@ -3102,10 +3102,10 @@ Default value: `{}`
 Data type:
 
 ```puppet
-Hash[String, Variant[
-      String,
-      Array[String],
-      Hash[String, Variant[String, Array[String]]],
+Hash[String, Variant[
+      String,
+      Array[String],
+      Hash[String, Variant[String, Array[String]]],
   ]]
 ```
 
@@ -3545,10 +3545,10 @@ Default index files for NGINX to read when traversing a directory
 Default value:
 
 ```puppet
-[
-    'index.html',
-    'index.htm',
-    'index.php',
+[
+    'index.html',
+    'index.htm',
+    'index.php',
   ]
 ```
 
@@ -5244,9 +5244,9 @@ Type Alias for Nginx::LogFormat
 Alias of
 
 ```puppet
-Variant[String[1], Struct[{
-      Optional[escape] => Enum['default', 'json', 'none'],
-      format           => String[1],
+Variant[String[1], Struct[{
+      Optional[escape] => Enum['default', 'json', 'none'],
+      format           => String[1],
   }]]
 ```
 
@@ -5295,27 +5295,27 @@ Type Alias for Nginx::UpstreamCustomParameters
 Alias of
 
 ```puppet
-Hash[String[1], Variant[
-    String[1],
-    Integer,
-    Array[
-      Variant[
-        String[1],
-        Integer
-      ]
-    ],
-    Hash[String[1],
-      Variant[
-        String[1],
-        Integer,
-        Array[
-          Variant[
-            String[1],
-            Integer,
-          ]
-        ]
-      ]
-    ]
+Hash[String[1], Variant[
+    String[1],
+    Integer,
+    Array[
+      Variant[
+        String[1],
+        Integer
+      ]
+    ],
+    Hash[String[1],
+      Variant[
+        String[1],
+        Integer,
+        Array[
+          Variant[
+            String[1],
+            Integer,
+          ]
+        ]
+      ]
+    ]
   ]]
 ```
 
@@ -5326,25 +5326,25 @@ Type Alias for Nginx::UpstreamDefaults
 Alias of
 
 ```puppet
-Struct[{
-    context           => Optional[Enum['http', 'stream']],
-    member_defaults   => Optional[Nginx::UpstreamMemberDefaults],
-    hash              => Optional[String],
-    ip_hash           => Optional[Boolean],
-    keepalive         => Optional[Integer[1]],
-    kepalive_requests => Optional[Integer[1]],
-    keepalive_timeout => Optional[Nginx::Time],
-    least_conn        => Optional[Boolean],
-    least_time        => Optional[Nginx::UpstreamLeastTime],
-    ntlm              => Optional[Boolean],
-    queue_max         => Optional[Integer],
-    queue_timeout     => Optional[Nginx::Time],
-    random            => Optional[String],
-    statefile         => Optional[Stdlib::Unixpath],
-    sticky            => Optional[Nginx::UpstreamSticky],
-    zone              => Optional[Nginx::UpstreamZone],
-    cfg_append        => Optional[Hash],
-    cfg_prepend       => Optional[Hash],
+Struct[{
+    context           => Optional[Enum['http', 'stream']],
+    member_defaults   => Optional[Nginx::UpstreamMemberDefaults],
+    hash              => Optional[String],
+    ip_hash           => Optional[Boolean],
+    keepalive         => Optional[Integer[1]],
+    kepalive_requests => Optional[Integer[1]],
+    keepalive_timeout => Optional[Nginx::Time],
+    least_conn        => Optional[Boolean],
+    least_time        => Optional[Nginx::UpstreamLeastTime],
+    ntlm              => Optional[Boolean],
+    queue_max         => Optional[Integer],
+    queue_timeout     => Optional[Nginx::Time],
+    random            => Optional[String],
+    statefile         => Optional[Stdlib::Unixpath],
+    sticky            => Optional[Nginx::UpstreamSticky],
+    zone              => Optional[Nginx::UpstreamZone],
+    cfg_append        => Optional[Hash],
+    cfg_prepend       => Optional[Hash],
 }]
 ```
 
@@ -5373,22 +5373,22 @@ Type Alias for Nginx::UpstreamMember
 Alias of
 
 ```puppet
-Struct[{
-    server         => Optional[Nginx::UpstreamMemberServer],
-    port           => Optional[Stdlib::Port],
-    weight         => Optional[Integer[1]],
-    max_conns      => Optional[Integer[1]],
-    max_fails      => Optional[Integer[0]],
-    fail_timeout   => Optional[Nginx::Time],
-    backup         => Optional[Boolean],
-    resolve        => Optional[Boolean],
-    route          => Optional[String],
-    service        => Optional[String],
-    slow_start     => Optional[Nginx::Time],
-    state          => Optional[Enum['drain','down']],
-    params_prepend => Optional[String],
-    params_append  => Optional[String],
-    comment        => Optional[String],
+Struct[{
+    server         => Optional[Nginx::UpstreamMemberServer],
+    port           => Optional[Stdlib::Port],
+    weight         => Optional[Integer[1]],
+    max_conns      => Optional[Integer[1]],
+    max_fails      => Optional[Integer[0]],
+    fail_timeout   => Optional[Nginx::Time],
+    backup         => Optional[Boolean],
+    resolve        => Optional[Boolean],
+    route          => Optional[String],
+    service        => Optional[String],
+    slow_start     => Optional[Nginx::Time],
+    state          => Optional[Enum['drain','down']],
+    params_prepend => Optional[String],
+    params_append  => Optional[String],
+    comment        => Optional[String],
 }]
 ```
 
@@ -5399,21 +5399,21 @@ Type Alias for Nginx::UpstreamMemberDefaults
 Alias of
 
 ```puppet
-Struct[{
-    server         => Optional[Nginx::UpstreamMemberServer],
-    port           => Optional[Stdlib::Port],
-    weight         => Optional[Integer[1]],
-    max_conns      => Optional[Integer[1]],
-    max_fails      => Optional[Integer[0]],
-    fail_timeout   => Optional[Nginx::Time],
-    backup         => Optional[Boolean],
-    resolve        => Optional[Boolean],
-    route          => Optional[String],
-    service        => Optional[String],
-    slow_start     => Optional[Nginx::Time],
-    state          => Optional[Enum['drain','down']],
-    params_prepend => Optional[String],
-    params_append  => Optional[String],
+Struct[{
+    server         => Optional[Nginx::UpstreamMemberServer],
+    port           => Optional[Stdlib::Port],
+    weight         => Optional[Integer[1]],
+    max_conns      => Optional[Integer[1]],
+    max_fails      => Optional[Integer[0]],
+    fail_timeout   => Optional[Nginx::Time],
+    backup         => Optional[Boolean],
+    resolve        => Optional[Boolean],
+    route          => Optional[String],
+    service        => Optional[String],
+    slow_start     => Optional[Nginx::Time],
+    state          => Optional[Enum['drain','down']],
+    params_prepend => Optional[String],
+    params_append  => Optional[String],
 }]
 ```
 
@@ -5436,29 +5436,29 @@ Type Alias for Nginx::UpstreamSticky
 Alias of
 
 ```puppet
-Variant[Hash[
-    Enum['cookie'],
-    Struct[{
-        name     => String,
-        expires  => Optional[Variant[Nginx::Time,Enum['max']]],
-        domain   => Optional[String],
-        httponly => Optional[Boolean],
-        secure   => Optional[Boolean],
-        path     => Optional[String],
-    }]
-  ], Hash[
-    Enum['route'],
-    String
-  ], Hash[
-    Enum['learn'],
-    Struct[{
-        create  => String,
-        lookup  => String,
-        zone    => Nginx::UpstreamStickyZone,
-        timeout => Optional[Nginx::Time],
-        header  => Optional[Boolean],
-        sync    => Optional[Boolean],
-    }]
+Variant[Hash[
+    Enum['cookie'],
+    Struct[{
+        name     => String,
+        expires  => Optional[Variant[Nginx::Time,Enum['max']]],
+        domain   => Optional[String],
+        httponly => Optional[Boolean],
+        secure   => Optional[Boolean],
+        path     => Optional[String],
+    }]
+  ], Hash[
+    Enum['route'],
+    String
+  ], Hash[
+    Enum['learn'],
+    Struct[{
+        create  => String,
+        lookup  => String,
+        zone    => Nginx::UpstreamStickyZone,
+        timeout => Optional[Nginx::Time],
+        header  => Optional[Boolean],
+        sync    => Optional[Boolean],
+    }]
   ]]
 ```
 
