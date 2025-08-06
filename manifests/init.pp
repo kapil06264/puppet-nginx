@@ -11,7 +11,7 @@
 # @param include_modules_enabled
 #   When set, nginx will include module configurations files installed in the
 #   /etc/nginx/modules-enabled directory. This is also enabled if mail is
-#   being configured (to allow the module to be loaded).
+#   being configured (to allow the module to be load).
 #
 # @param passenger_package_name
 #   The name of the package to install in order for the passenger module of
